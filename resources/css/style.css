@@ -1,0 +1,112 @@
+:root {
+  --primary-gradient: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  font-size: 10px;
+  box-sizing: border-box; }
+
+body {
+  background-color: var(--very-clight-grayish-blue); }
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 10rem; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
+body {
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif; }
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 0;
+  background-image: var(--primary-gradient);
+  border-radius: 0.5rem;
+  border: solid white 0.5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1; }
+  .btn:hover {
+    background-image: none;
+    background-color: #fff;
+    color: #696fdd;
+    border-color: #696fdd; }
+  .btn:active {
+    transform: scale(0.95); }
+  .btn:focus {
+    outline: none; }
+
+.pricing-switch {
+  text-align: center;
+  margin: 5rem 0; }
+  .pricing-switch #switch {
+    display: none; }
+    .pricing-switch #switch:checked + .pricing-switch__toggle::after {
+      transform: translateX(-100%); }
+  .pricing-switch__toggle {
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin: 0 2rem;
+    background-image: var(--primary-gradient);
+    cursor: pointer;
+    transition: opacity .3s; }
+    .pricing-switch__toggle::after {
+      content: "";
+      position: absolute;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: transform .3s; }
+    .pricing-switch__toggle:hover {
+      opacity: .7; }
+
+.pricing-time-range {
+  color: var(--light-grayish-blue); }
