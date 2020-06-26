@@ -3,15 +3,32 @@
 ///////////////////////////////////////////////////////////////
 
 :root {
-  --primary-gradient: linear-gradient(
-    to bottom right,
-    hsl(236, 72%, 79%),
-    hsl(237, 63%, 64%)
-  );
-  --very-light-grayish-blue: hsl(240, 78%, 98%);
-  --light-grayish-blue: hsl(234, 14%, 74%);
-  --grayish-blue: hsl(233, 13%, 49%);
-  --dark-grayish-blue: hsl(232, 13%, 33%);
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
+  //////////////////////////////social media card top border color////////////////////
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+  //////////////////////////////theme colors/////////////////////////////////////////
+  --background: hsl(0, 0%, 100%);
+  --top-background-pattern: hsl(225, 100%, 98%);
+  --card-background: hsl(227, 47%, 96%);
+  --card-hover: hsl(232, 33%, 91%);
+  --text-primary: hsl(230, 17%, 14%);
+  --text-secondary: hsl(228, 12%, 44%);
+  --toggle-color: hsl(230, 22%, 74%);
+}
+
+[theme="dark"] {
+  --background: hsl(230, 17%, 14%);
+  --top-background-pattern: hsl(232, 19%, 15%);
+  --card-background: hsl(228, 28%, 20%);
+  --card-hover: hsl(227, 26%, 27%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%);
+  --toggle-color: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 * {
@@ -28,10 +45,11 @@
 html {
   font-size: 10px;
   box-sizing: border-box;
+
 }
 
 body {
-  background-color: var(--very-clight-grayish-blue);
+  background-color: var(--background);
 }
 
 .flex-row {
@@ -39,6 +57,10 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 716px){
+    justify-content: center;
+  }
 }
 
 .flex-column {
@@ -48,17 +70,33 @@ body {
   align-items: center;
 }
 
-.container{
+.container {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 10rem;
+
+  @media only screen and (max-width: 716px){
+    max-width: 140rem;
+    padding: 0 5rem;
+  }
+}
+
+.number{
+  &-increase{
+    color: var(--lime-green);
+  }
+
+  &-decrease{
+    color: var(--bright-red);
+  }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--text-primary);
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--text-secondary);
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./resources/css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <title>Social media dashboard</title>
 
@@ -21,7 +21,7 @@
         <h3>Total Followers: 23,004</h3>
       </div>
 
-      <div class="switch-container">
+      <div class="switch-container flex-row">
         <label for="switch">Dark Mode</label>
         <input type="checkbox" id="switch">
         <label class="switch-toggle" for="switch"></label>
@@ -29,11 +29,11 @@
 
     </div>
 
-    <div class="flex-row container">
+    <div class="header__main flex-row container">
 
-      <div class="card">
+      <div class="card flex-column">
 
-        <div class="user">
+        <div class="user flex-row">
           <img src="./resources/images/icon-facebook.svg" alt="Facebook icon">
           <span class="user-name">@nathanf</span>
         </div>
@@ -43,14 +43,14 @@
           <span>Followers</span>
         </div>
 
-        <span class="number-increase"> <img src="resources/images/icon-up.svg"> 12 Today</span>
+        <span class="number-increase"> <img src="resources/images/icon-up.svg" alt="Increase icon"> 12 Today</span>
 
       </div>
 
-      <div class="card">
+      <div class="card card-twitter flex-column">
 
-        <div class="user">
-          <img src="./resources/images/icon-facebook.svg" alt="Facebook icon">
+        <div class="user flex-row">
+          <img src="./resources/images/icon-twitter.svg" alt="Twitter icon">
           <span class="user-name">@nathanf</span>
         </div>
 
@@ -59,15 +59,15 @@
           <span>Followers</span>
         </div>
 
-        <span class="number-increase"> <img src="resources/images/icon-up.svg"> 99 Today</span>
+        <span class="number-increase"> <img src="resources/images/icon-up.svg" alt="Increase icon"> 99 Today</span>
 
 
       </div>
 
-      <div class="card">
+      <div class="card card-instagram flex-column">
 
-        <div class="user">
-          <img src="./resources/images/icon-facebook.svg" alt="Facebook icon">
+        <div class="user flex-row">
+          <img src="./resources/images/icon-instagram.svg" alt="Instagram icon">
           <span class="user-name">@realnathanf</span>
         </div>
 
@@ -76,14 +76,14 @@
           <span>Followers</span>
         </div>
 
-        <span class="number-increase"> <img src="resources/images/icon-up.svg"> 1099 Today</span>
+        <span class="number-increase"> <img src="resources/images/icon-up.svg" alt="Increase icon"> 1099 Today</span>
 
       </div>
 
-      <div class="card">
+      <div class="card card-youtube flex-column">
 
-        <div class="user">
-          <img src="./resources/images/icon-facebook.svg" alt="Facebook icon">
+        <div class="user flex-row">
+          <img src="./resources/images/icon-youtube.svg" alt="Youtube icon">
           <span class="user-name">Nathan F.</span>
         </div>
 
@@ -92,7 +92,7 @@
           <span>Subscribers</span>
         </div>
 
-        <span class="number-increase"> <img src="resources/images/icon-up.svg"> 144 Today</span>
+        <span class="number-decrease"> <img src="resources/images/icon-down.svg" alt="Decrease icon"> 144 Today</span>
 
       </div>
 
@@ -100,45 +100,45 @@
 
   </header>
 
-  
-  <div class="container flex-row">
+
+  <div class="overview container">
     <h2>Overview - Today</h2>
 
     <div class="flex-row">
       <div class="card flex-row">
-        <div>
+        <div class="views">
           <p> Page Views </p>
           <span class="daily-numbers">87</span>
         </div>
-        <div class="flex-column">
-          <img src="./resources/images/icon-facebook.svg" alt="Facebook-icon">
+        <div class="change-rate flex-column">
+          <img class="social-media-icon"  src="./resources/images/icon-facebook.svg" alt="Facebook-icon">
           <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 3%</span>
         </div>
       </div>
 
       <div class="card flex-row">
 
-        <div>
+        <div class="views">
           <p> Likes </p>
           <span class="daily-numbers">52</span>
         </div>
 
-        <div class="flex-column">
-          <img src="./resources/images/icon-facebook.svg" alt="Facebook-icon">
-          <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 2%</span>
+        <div class="change-rate flex-column">
+          <img class="social-media-icon" src="./resources/images/icon-facebook.svg" alt="Facebook-icon">
+          <span class="number-decrease"><img src="./resources/images/icon-down.svg" alt="Decrease icon"> 2%</span>
         </div>
  
       </div>
 
       <div class="card flex-row">
 
-        <div>
+        <div class="views">
           <p> Likes </p>
           <span class="daily-numbers">5462</span>
         </div>
 
-        <div class="flex-column">
-          <img src="./resources/images/icon-instagram.svg" alt="Facebook-icon">
+        <div class="change-rate flex-column">
+          <img class="social-media-icon" src="./resources/images/icon-instagram.svg" alt="Instagram-icon">
           <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 2257%</span>
         </div>
 
@@ -146,13 +146,13 @@
 
       <div class="card flex-row">
 
-        <div>
+        <div class="views">
           <p> Profile Views </p>
           <span class="daily-numbers">52k</span>
         </div>
 
-        <div class="flex-column">
-          <img src="./resources/images/icon-instagram.svg" alt="Facebook-icon">
+        <div class="change-rate flex-column">
+          <img class="social-media-icon" src="./resources/images/icon-instagram.svg" alt="Instagram-icon">
           <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 1375%</span>
         </div>
 
@@ -160,13 +160,13 @@
       
       <div class="card flex-row">
         
-        <div>
+        <div class="views">
           <p>Retweets</p>
           <span class="daily-numbers">117</span>
         </div>
 
-        <div class="flex-column">
-          <img src="./resources/images/icon-twitter.svg" alt="Facebook-icon">
+        <div class="change-rate flex-column">
+          <img class="social-media-icon" src="./resources/images/icon-twitter.svg" alt="Facebook-icon">
           <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 303%</span>
         </div>
 
@@ -174,13 +174,13 @@
 
       <div class="card flex-row">
 
-        <div>
+        <div class="views">
           <p> Likes </p>
           <span class="daily-numbers">507</span>
         </div>
 
-        <div class="flex-column">
-          <img src="./resources/images/icon-twitter.svg" alt="Facebook-icon">
+        <div class="change-rate flex-column">
+          <img class="social-media-icon" src="./resources/images/icon-twitter.svg" alt="Facebook-icon">
           <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 553%</span>
         </div>
 
@@ -188,43 +188,41 @@
       
       <div class="card flex-row">
 
-        <div>
+        <div class="views">
           <p> Likes </p>
           <span class="daily-numbers">107</span>
         </div>
 
-        <div class="flex-column">
-          <img src="./resources/images/icon-youtube.svg" alt="Facebook-icon">
-          <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 19%</span>
+        <div class="change-rate flex-column">
+          <img class="social-media-icon" src="./resources/images/icon-youtube.svg" alt="Facebook-icon">
+          <span class="number-decrease"><img src="./resources/images/icon-down.svg" alt="Decrease icon"> 19%</span>
         </div>
 
       </div>
 
       <div class="card flex-row">
 
-        <div>
+        <div class="views">
           <p> Total Views </p>
           <span class="daily-numbers">1407</span>
         </div>
 
-        <div class="flex-column">
-          <img src="./resources/images/icon-youtube.svg" alt="Facebook-icon">
-          <span class="number-increase"><img src="./resources/images/icon-up.svg" alt="Increase icon"> 12%</span>
+        <div class="change-rate flex-column">
+          <img class="social-media-icon" src="./resources/images/icon-youtube.svg" alt="Facebook-icon">
+          <span class="number-decrease"><img src="./resources/images/icon-down.svg" alt="Decrease icon"> 12%</span>
         </div>
 
       </div>
       
     </div>
   </div>
-
   
-  
-  
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Omar-JR">Omar Masoud Omar</a>.
   </div>
+
 </body>
 
+<script src="./resources/javascript/theme-change.js"></script>
 </html>

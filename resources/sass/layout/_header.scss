@@ -1,0 +1,93 @@
+header {
+  background-color: var(--top-background-pattern);
+  border-radius: 0 0 2rem 2rem;
+  padding: 5rem 0;
+  margin-bottom: 15rem;
+
+  @media only screen and (max-width: 716px) {
+    margin-bottom: 35rem;
+  }
+  .header {
+    &__top {
+      margin-bottom: 5rem;
+
+      h1 {
+        color: var(--text-primary);
+      }
+
+      h3 {
+        color: var(--text-secondary);
+      }
+
+      @media only screen and (max-width: 716px) {
+        flex-direction: column;
+
+        &-text{
+            margin-bottom: 2.5rem;
+            align-self: flex-start;
+        }
+
+        .switch-container{
+        width: 100%;
+          align-self: flex-start;
+          padding-top: 2.5rem;
+          border-top: solid 1px var(--text-secondary);
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      h1{
+          font-size: 2rem;
+      }
+    }
+
+    &__main {
+      margin-bottom: -10%;
+
+      @media only screen and (max-width: 716px) {
+       margin-bottom: -50%;
+      }
+      .card {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 0.4rem;
+          background-color: var(--facebook);
+          border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        &-twitter::before {
+          background-color: var(--twitter);
+        }
+
+        &-instagram::before {
+          background-image: var(--instagram);
+        }
+
+        &-youtube::before {
+          background-color: var(--youtube);
+        }
+
+        .user-name {
+          margin-left: 1rem;
+        }
+
+        .followers-count {
+          color: var(--text-primary);
+          font-size: 6rem;
+          margin-top: 2rem;
+
+          & + span {
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

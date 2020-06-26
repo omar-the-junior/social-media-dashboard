@@ -1,0 +1,26 @@
+.overview{
+    h2{
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+    }
+
+    .views{
+        p{
+            margin-bottom: 3rem;
+        }
+        span{
+            font-size: 3rem;
+            color: var(--text-primary);
+        }
+    }
+
+    .change-rate{
+        .social-media-icon{
+            margin-bottom: 4rem;
+        }
+    }
+
+    .card{
+        justify-content: space-between;
+    }
+}

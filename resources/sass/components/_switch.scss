@@ -2,47 +2,49 @@
 /////////////////////////////toggle switch button/////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.pricing {
-  &-switch {
-    text-align: center;
-    margin: 5rem 0;
+#switch{
+  display: none;
 
-    #switch {
-      display: none;
+  &:checked + .switch-toggle::after{
+    transform: translatex(0) ;
+  }
+}
 
-      &:checked + .pricing-switch__toggle::after{
-        transform: translateX(-100%);
-      }
-    }
-
-    &__toggle {
-      position: relative;
-      display: inline-block;
-      width: 6rem;
-      height: 3.5rem;
-      padding: 0.5rem;
-      border-radius: 2rem;
-      margin: 0 2rem;
-      background-image: var(--primary-gradient);
-      cursor: pointer;
-      transition: opacity .3s;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        background-color: #fff;
-        transition: transform .3s;
-      }
-
-      &:hover{
-          opacity: .7;
-      }
+.switch {
+  &-container{
+    label:first-of-type{
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-right: 2rem;
     }
   }
 
-  &-time-range {
-    color: var(--light-grayish-blue);
+  &-toggle{
+    position: relative;
+    display: block;
+    height: 2.5rem;
+    padding: .3rem;
+    width: 5rem;
+    background-color: var(--toggle-color);
+    background-image: var(--toggle-color);
+    border-radius: 2rem;
+    transition: all .5s;
+    cursor: pointer;
+
+    &:after{
+      content: "";
+      display: inline-block;
+      height: 1.9rem;
+      width: 1.9rem;
+      background-color: var(--background);
+      border-radius: 50%;
+      transition: all .3s;
+      transform: translatex(130%)
+    }
+
+    &:hover{
+      background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    }
+
   }
 }
